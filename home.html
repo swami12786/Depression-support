@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Support Space</title>
+    <link rel="stylesheet" href="home.css"> <!-- CSS file reference -->
+</head>
+<body>
+    <div class="container">
+        <h1>User Profile</h1>
+
+        <div id="userInfo">
+            <p><strong>Name:</strong> <span id="userName"></span></p>
+            <p><strong>Email:</strong> <span id="userEmail"></span></p>
+            <p><strong>Mental Health History:</strong> <span id="mentalHealthHistory"></span></p>
+        </div>
+
+        <h3>Mood Tracking</h3>
+
+        <!-- Mood Selection -->
+        <label for="moodSelect">How do you feel today?</label>
+        <select id="moodSelect" onchange="handleMoodSelection()">
+            <option value="">Select your mood</option>
+            <option value="nice">Nice</option>
+            <option value="awesome">Awesome</option>
+            <option value="average">Average</option>
+            <option value="notGood">Not Good</option>
+            <option value="notFine">Not Fine</option>
+            <option value="worse">Worse</option>
+            <option value="depressed">Depressed</option>
+            <option value="feelingLow">Feeling Low</option>
+        </select>
+        <p id="moodMessage"></p>
+
+        <!-- Reason Input -->
+        <div id="reasonContainer" style="display: none;">
+            <label for="reasonInput">Please tell us why:</label>
+            <textarea id="reasonInput" rows="3"></textarea>
+            <button onclick="submitReason()">Submit Reason</button>
+        </div>
+
+        <!-- Suggestions Section -->
+        <div id="suggestionsContainer" style="display: none;">
+            <h4>Here are some suggestions to help you:</h4>
+            <ul id="suggestionsList"></ul>
+        </div>
+
+        <!-- eBook Recommendations Section -->
+        <div id="ebookContainer" style="display: none;">
+            <h4>Recommended eBooks:</h4>
+            <ul id="ebookList">
+                <li><a href="https://example.com/ebook1" target="_blank">"Mindfulness for Beginners"</a></li>
+                <li><a href="https://example.com/ebook2" target="_blank">"Coping with Anxiety"</a></li>
+                <li><a href="https://example.com/ebook3" target="_blank">"Stress Management Strategies"</a></li>
+            </ul>
+        </div>
+
+        <!-- Mood History Section -->
+        <div id="moodHistoryContainer">
+            <h4>Mood History</h4>
+            <ul id="moodHistoryList"></ul>
+        </div>
+
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="home.js"></script>
+</body>
+</html>

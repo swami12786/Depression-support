@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Space - Login/Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Support Space</h1>
+
+        <div class="form-container">
+            <!-- Login Form -->
+            <div id="loginForm" class="form-section">
+                <h2>Login</h2>
+                <input type="email" placeholder="Email" id="loginEmail" required>
+                <input type="password" placeholder="Password" id="loginPassword" required>
+                <button onclick="login()">Login</button>
+                <p id="loginError" class="error"></p>
+            </div>
+
+            <!-- Registration Form -->
+            <div id="registerForm" class="form-section">
+                <h2>Register</h2>
+                <input type="text" placeholder="Name" id="registerName" required>
+                <input type="email" placeholder="Email" id="registerEmail" required>
+                <input type="password" placeholder="Password" id="registerPassword" required>
+                <button onclick="register()">Register</button>
+                <p id="registerError" class="error"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
